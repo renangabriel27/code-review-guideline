@@ -1,4 +1,4 @@
-# Code Review - [Guidelines]
+# Code Review - [Guideline]
 
 ## Motivos para dominar o processo de Code Review
 
