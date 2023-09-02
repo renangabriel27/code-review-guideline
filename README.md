@@ -101,3 +101,110 @@ Outros exemplos:
 - Diminuiu o número de ciclos de revisões
 - Velocidade de um novo dev em onboarding
 - Qualidade da discussão na PR
+
+### 2. Faça melhores code reviews
+Impulsionar a qualidade do código e elevar as skills do time
+
+**Tópicos**
+- O que olhar em uma code review 🔎
+- Como realizar uma code review (passo a passo) ⚙
+- Escrever comentários eficazes nas code reviews 📝
+
+### O que olhar em uma code review 👀
+
+- Falhas primeiro
+- Legibilidade do código
+- Oportunidades de aprendizado
+
+O que procurar - Antes de ler o `diff` do código
+
+- Escopo da task
+- Build, check, tests
+- Conflitos
+- Screenshots
+- Ela resolve o problema - o problema certo?
+- Gaps de regras de negócio
+- Mudanças de comportamento inesperadas
+- Otimização / perfomance
+- Documentação
+- Complexidade / over-engineering
+- Code Style?
+- Efeitos colaterais
+
+O que procurar - Gaps de legibilidade
+
+- Intenção precisa ser óbvia
+- Defina nomes significativos
+- Convenções
+- Implementação e testes
+
+Lembre-se
+> *“Any fool can write code that a computer can understand. Good programmers write code that humans can understand.”* — Martin Fowler
+
+### Como realizar uma code review (passo a passo)
+
+- Leia a descrição da code review, e as tasks relacionadas
+- Verifique se você é o revisor apropriado
+- Reserve um tempo
+- Otimização para velocidade ou qualidade?
+
+#### Como revisar (Leia para entender)
+
+- Comece pelo ponto  crucial
+- Leia aleatoriamente
+- Leia classe por classe depois que você entender
+- Procure falhas - você é um detetive
+
+#### Como revisar (Comentando)
+- Escreva comentários 
+- Reescreva comentários 
+- Deixe comentários positivos (quando necessário)
+- Faça uma decisão clara sobre aprovação
+
+#### Como revisar (Escreva comentários eficazes)
+
+- Reduzir desentendimentos
+- Colegas vão respeitar sua opinião
+- Exemplo prático de um bom trabalho
+
+#### Comentário eficazes - `O código, não a pessoa`
+
+> ❌ "Você não checou o valor `null`."
+
+> ✅ "Esse valor do input pode ser `null`, o que vai causar um erro no servidor. Se o valor for `null`, você pode lançar uma exception `client/side`." ou
+
+> ✅ "O que poderia acontecer se for setado um valor `null`?"
+
+#### Comentário eficazes - `Críticas`
+
+> ❌ "Mude o nome da variável."
+
+> ✅ "Mudança, não bloqueante: Eu recomendaria mudar o nome da variável de `purchaseStatus` para `orderStatus`. A variável armazena o status de um pedido, não a compra."
+
+#### Comentário eficazes - `Explique o motivo`
+
+> ❌ "Use o `Promise.all`"
+
+> ✅ "`Promise.all` nesse caso de várias requisições vai rodar todas elas de forma assíncrona e finalizar somente depois de todas terem rodado, otimizando a velocidade do carregamento da página"
+
+#### Comentário eficazes - `Explique o motivo` + `background`
+
+> ❌ "Use o `Promise.all`"
+
+> ✅ "`Promise.all` nesse caso de várias requisições vai rodar todas elas de forma assíncrona e finalizar somente depois de todas terem rodado, otimizando a velocidade do carregamento da página. Para mais contexto: https://dev.to/cristuker/javascript-porque-usar-promiseall-4jc3"
+
+#### Comentário eficazes - `Recap`
+- Comente sobre o código, não a pessoa
+- Proponha um caminho para seguir, ou colaborar
+- Explique os motivos
+- Forneça um background
+
+## Referências
+
+- [Master the Code Review](https://curtiseinsmann.gumroad.com/l/code-review-course) (Course)
+- [Google's Engineering Practices documentation](https://google.github.io/eng-practices/) (Guide)
+- [Dropbox career framework](https://dropbox.github.io/dbx-career-framework/) (Site)
+- [There’s a human on the other side of your code review by Tadas Antanavicius](https://medium.com/@tadasant/theres-a-human-on-the-other-side-of-your-code-review-9732cc15bfee) (Post)
+- [Implementing a Strong Code-Review Culture by Derek Prior](https://www.youtube.com/watch?v=PJjmw9TRB7s&index=2&list=LLd_50AreJiQvwohSFlvH99w&ab_channel=Confreaks) (Talk)
+- [Clean Code como tornar nossos códigos legíveis para seres humanos](https://slides.com/viniciusalonso/clean-code-meetup-guarapuava) (Slides)
+- [Master the Code Review - Slides](https://slides.com/renanthompsom/master-the-code-review) (Slides)
